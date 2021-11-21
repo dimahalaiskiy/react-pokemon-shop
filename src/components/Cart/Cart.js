@@ -4,7 +4,7 @@ import classes from "./Cart.module.css";
 import CartItem from "../CartItem/CartItem";
 import Order from "../Order/Order";
 
-export const Cart = ({ cart, handleRemoveFromCart, handleUpdateCartQty }) => {
+export const Cart = ({ cart, handleUpdateCartQty }) => {
     const EmptyCart = () => (
         <Typography variant='subtittle1'>
             You have no items in your shopping cart, start adding some!
@@ -16,12 +16,7 @@ export const Cart = ({ cart, handleRemoveFromCart, handleUpdateCartQty }) => {
             <ul className={classes.container}>
                 <li className={classes.cart}>
                     {cart.line_items.map((cart) => (
-                        <CartItem
-                            cart={cart}
-                            key={cart.id}
-                            onRemoveCartItem={handleRemoveFromCart}
-                            onUpdateCartQty={handleUpdateCartQty}
-                        />
+                        <CartItem cart={cart} key={cart.id} onUpdateCartQty={handleUpdateCartQty} />
                     ))}
                 </li>
                 <li>
