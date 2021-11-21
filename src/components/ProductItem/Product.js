@@ -6,19 +6,14 @@ function CardComponent({ product, onAddToCard }) {
     return (
         <Card className={classes.card}>
             <div className={classes.card_item}>Name: {product.name}</div>
-            <img
-                className={classes.card_img}
-                src={product.image.url}
-                alt='#'></img>
+            <img className={classes.card_img} src={product.image.url} alt='#'></img>
             <li
                 className={classes.card_item_desc}
                 dangerouslySetInnerHTML={{
                     __html: product.description,
                 }}></li>
             <ul className={classes.card_purchase}>
-                <li className={classes.card_price}>
-                    {product.price.formatted_with_code}$
-                </li>
+                <li className={classes.card_price}>{product.price.formatted_with_symbol}</li>
                 <li className={classes.card_btn}>
                     <Button
                         variant='outlined'

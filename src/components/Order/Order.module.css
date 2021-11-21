@@ -1,0 +1,16 @@
+.cart_form {
+    padding: 15px;
+}
+
+.textfield {
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin-top: 10px;
+}

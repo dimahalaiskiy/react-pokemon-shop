@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "@chec/commerce.js": "^2.8.0"
+    "@chec/commerce.js": "^2.8.0",
+    "firebase": "^9.5.0",
+    "react-router-dom": "^6.0.2"
   }
 }

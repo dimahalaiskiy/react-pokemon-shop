@@ -3,3 +3,11 @@
     text-align: center;
     color: rgb(75, 17, 17);
 }
+
+.container {
+    display: flex;
+}
+
+.cart {
+    margin-right: 30px;
+}

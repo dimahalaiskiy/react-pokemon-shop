@@ -1,9 +1,10 @@
 import React from "react";
-import { Typography, Button } from "@mui/material";
+import { Typography } from "@mui/material";
 import classes from "./Cart.module.css";
 import CartItem from "../CartItem/CartItem";
+import Order from "../Order/Order";
 
-export const Cart = ({ cart }) => {
+export const Cart = ({ cart, handleRemoveFromCart, handleUpdateCartQty }) => {
     const EmptyCart = () => (
         <Typography variant='subtittle1'>
             You have no items in your shopping cart, start adding some!
@@ -13,9 +14,19 @@ export const Cart = ({ cart }) => {
     const FilledCart = () => (
         <div>
             <ul className={classes.container}>
-                {cart.line_items.map((cart) => (
-                    <CartItem cart={cart} />
-                ))}
+                <li className={classes.cart}>
+                    {cart.line_items.map((cart) => (
+                        <CartItem
+                            cart={cart}
+                            key={cart.id}
+                            onRemoveCartItem={handleRemoveFromCart}
+                            onUpdateCartQty={handleUpdateCartQty}
+                        />
+                    ))}
+                </li>
+                <li>
+                    <Order />
+                </li>
             </ul>
         </div>
     );

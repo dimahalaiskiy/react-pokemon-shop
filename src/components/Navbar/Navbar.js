@@ -1,25 +1,17 @@
 import classes from "./Navbar.module.css";
-import { Button, Badge } from "@mui/material/";
+import { Badge } from "@mui/material/";
+import { Link } from "react-router-dom";
 
 function Header({ totalItems }) {
     return (
         <header className={classes.header}>
-            <h1 className={classes.heading}>Pokemon shop</h1>
+            <Link className={classes.heading} components={Link} to='/'>
+                Pokemon shop
+            </Link>
             <Badge badgeContent={totalItems} color='warning'>
-                <Button
-                    className={classes.button}
-                    sx={{
-                        color: "white",
-                        border: "1px solid white",
-                        "&:hover": {
-                            border: "rgb(75, 17, 17);",
-                            backgroundColor: "white",
-                            color: "rgb(75, 17, 17);",
-                        },
-                    }}
-                    variant='outlined'>
+                <Link className={classes.link} to='/basket'>
                     basket
-                </Button>
+                </Link>
             </Badge>
         </header>
     );

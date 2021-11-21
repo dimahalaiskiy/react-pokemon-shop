@@ -1,4 +1,31 @@
 .container {
+    margin-bottom: 10px;
+    max-width: 340px;
+}
+
+.list {
     display: flex;
     align-items: center;
+    padding: 10px 0px 10px 10px;
+
+}
+
+.img {
+    margin-right: 25px;
+}
+
+.container_desc {
+    min-width: 100px;
+}
+
+.desc_item {
+    margin-bottom: 15px;
+}
+
+.quantity_item {
+    margin: 0px 10px;
+}
+
+.quantity {
+    padding-right: 15px;
 }
